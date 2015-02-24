@@ -20,7 +20,7 @@ namespace PdfCreator.Models
 
         public virtual Document Document { get; set; }
 
-        public string directoryPath { get { return HttpContext.Current.Server.MapPath("~\\App_Data\\Shapes\\"); } }
+        public string directoryPath { get { return HttpContext.Current.Server.MapPath("~\\App_Data\\DataFiles\\"); } }
         public string imagePath { get { return Path.Combine(directoryPath, id.ToString() + extension); } }
 
         public void saveFile(HttpPostedFileBase file)
